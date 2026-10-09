@@ -1,74 +1,184 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <title>THE CRADLE</title>
-
-  <style>
-    body {
-      margin: 0;
-      background: #110d18;
-      color: #e9dfce;
-      font-family: Georgia, serif;
-      text-align: center;
-    }
-
-    header {
-      padding: 110px 20px;
-    }
-
-    h1 {
-      font-size: 52px;
-      letter-spacing: 6px;
-      color: #c5a574;
-    }
-
-    p {
-      line-height: 1.9;
-      color: #c9bfd0;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 14px 35px;
-      border: 1px solid #c5a574;
-      color: #c5a574;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background: #c5a574;
-      color: #110d18;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>빅마더의 요람 | BIG MOTHER'S CRADLE</title>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #110d17;
+  color: #eee4d8;
+  font-family: Georgia, "Apple SD Gothic Neo", serif;
+}
+nav {
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 1px solid #534052;
+}
+.logo { color: #d6b77d; letter-spacing: 2px; }
+nav a {
+  color: #ddd0d9;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 13px;
+}
+.hero {
+  min-height: 75vh;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(
+    ellipse, #302038 0%, #110d17 75%
+  );
+}
+.eyebrow {
+  color: #c6a676;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+h1 {
+  font-size: clamp(36px, 7vw, 75px);
+  font-weight: normal;
+  margin: 22px 0 10px;
+}
+.subtitle {
+  color: #c6a676;
+  letter-spacing: 4px;
+  font-size: 17px;
+}
+.description {
+  color: #c8bac9;
+  line-height: 2;
+  margin-top: 30px;
+}
+.button {
+  margin-top: 35px;
+  padding: 15px 35px;
+  border: 1px solid #c6a676;
+  color: #d6b77d;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.button:hover {
+  background: #c6a676;
+  color: #110d17;
+}
+section {
+  padding: 80px 7%;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: #d6b77d;
+}
+.section-sub {
+  text-align: center;
+  color: #ad9eaf;
+  margin-bottom: 40px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #211927;
+  border: 1px solid #58465c;
+  padding: 45px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #eee4d8;
+  transition: 0.3s;
+}
+.card:hover {
+  border-color: #d6b77d;
+  transform: translateY(-5px);
+}
+.card .symbol {
+  font-size: 30px;
+  color: #d6b77d;
+}
+.card h3 {
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+.card p { color: #b7a9bc; }
+footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid #534052;
+  color: #9e8ca5;
+  font-size: 12px;
+}
+</style>
 </head>
-
 <body>
 
-  <header>
-    <p>✦ THE WORLD OF BIG MOTHER ✦</p>
+<nav>
+  <div class="logo">✦ BIG MOTHER'S CRADLE</div>
+  <div>
+    <a href="#home">HOME</a>
+    <a href="#archive">ARCHIVE</a>
+  </div>
+</nav>
 
-    <h1>THE CRADLE</h1>
+<header class="hero" id="home">
+  <div class="eyebrow">✦ THE WORLD OF BIG MOTHER ✦</div>
+  <h1>빅마더의 요람</h1>
+  <div class="subtitle">BIG MOTHER'S CRADLE</div>
+  <p class="description">
+    죽음을 넘어, 새로운 삶을 선택한 아이들.<br>
+    선택받은 아이들의 이야기가 이곳에 기록된다.
+  </p>
+  <a class="button" href="#archive">ENTER THE ARCHIVE</a>
+</header>
 
-    <p>
-      A Gothic Fantasy Character Archive
-      <br>
-      선택받은 아이들의 기록
-    </p>
+<section id="archive">
+  <h2>THE ARCHIVE</h2>
+  <p class="section-sub">요람의 기록 · Archive of the Cradle</p>
 
-    <a class="button" href="#archive">
-      ENTER THE ARCHIVE
+  <div class="cards">
+    <a class="card" href="#archive">
+      <div class="symbol">♛</div>
+      <h3>CHARACTERS</h3>
+      <p>캐릭터 도감</p>
     </a>
-  </header>
+    <a class="card" href="#archive">
+      <div class="symbol">✧</div>
+      <h3>WORLD</h3>
+      <p>세계관</p>
+    </a>
+    <a class="card" href="#archive">
+      <div class="symbol">✦</div>
+      <h3>AUTHORITY</h3>
+      <p>권능과 계급</p>
+    </a>
+    <a class="card" href="#archive">
+      <div class="symbol">❖</div>
+      <h3>GALLERY</h3>
+      <p>일러스트 갤러리</p>
+    </a>
+  </div>
+</section>
 
-  <section id="archive">
-    <h2>CHARACTER ARCHIVE</h2>
-    <p>곧 캐릭터 도감이 공개됩니다.</p>
-  </section>
+<footer>
+  ✦ BIG MOTHER'S CRADLE ✦<br>
+  A Gothic Fantasy Character Archive
+</footer>
 
 </body>
 </html>
