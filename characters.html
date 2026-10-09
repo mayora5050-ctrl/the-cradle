@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHARACTER ARCHIVE | 빅마더의 요람</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#110d17;color:#eee4d8;font-family:Georgia,"Apple SD Gothic Neo",serif}
+nav{padding:22px 6%;border-bottom:1px solid #57455d}
+nav a{color:#c9a675;text-decoration:none;letter-spacing:2px}
+header{text-align:center;padding:70px 20px 45px}
+small{color:#c9a675;letter-spacing:3px}
+h1{font-size:clamp(30px,5vw,52px);font-weight:normal;letter-spacing:3px}
+header p{color:#b9a7be}
+main{max-width:1200px;margin:auto;padding:20px 5% 80px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:18px}
+.card{background:#211a27;border:1px solid #45394a;padding:9px;text-align:center;text-decoration:none;color:#eee4d8;transition:.25s}
+.card.active{border-color:#c9a675}
+.card.active:hover{transform:translateY(-5px);background:#302439}
+.picture{aspect-ratio:3/4;background:#17121d;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.picture img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.question{font-size:45px;color:#514359}
+.number{font-size:11px;color:#c9a675;letter-spacing:2px;margin-top:13px}
+.name{font-size:14px;margin:8px 0 4px}
+.unknown{color:#75677d}
+.credit{font-size:10px;color:#b9a7be;margin:5px 0}
+footer{text-align:center;padding:30px;color:#8c7b91;border-top:1px solid #45394a}
+</style>
+</head>
+<body>
+<nav><a href="index.html">✦ BIG MOTHER'S CRADLE</a></nav>
+<header>
+<small>THE CHOSEN CHILDREN</small>
+<h1>CHARACTER ARCHIVE</h1>
+<p>선택받은 아이들의 기록</p>
+</header>
+<main>
+<div class="grid" id="grid"></div>
+</main>
+<footer>✦ BIG MOTHER'S CRADLE ✦</footer>
+<script>
+const grid=document.getElementById("grid");
+for(let i=1;i<=100;i++){
+const num=String(i).padStart(3,"0");
+if(i===1){
+grid.innerHTML+=`
+<a class="card active" href="athanasia.html">
+<div class="picture"><img src="portrait.png" alt="아타나시아 두상"></div>
+<div class="number">NO. ${num}</div>
+<div class="name">ATHANASIA</div>
+<div class="credit">Illustration © 압</div>
+</a>`;
+}else{
+grid.innerHTML+=`
+<div class="card">
+<div class="picture"><span class="question">?</span></div>
+<div class="number">NO. ${num}</div>
+<div class="name unknown">UNKNOWN</div>
+</div>`;
+}
+}
+</script>
+</body>
+</html>
